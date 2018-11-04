@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="center" hgap="10" maxWidth="1.7976931348623157E308" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <ScrollPane hbarPolicy="ALWAYS" maxWidth="1.7976931348623157E308" prefHeight="928.0" prefWidth="6000.0" vbarPolicy="ALWAYS" GridPane.columnIndex="1">
+         <content>
+            <VBox fx:id="words" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="0.0" />
+         </content>
+      </ScrollPane>
+      <VBox fx:id="buttonsField" prefHeight="200.0" prefWidth="100.0" />
+   </children>
+</GridPane>
