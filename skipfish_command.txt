@@ -1,0 +1,1 @@
+skipfish -S complete.wl --auth-form http://127.0.0.1:1234/log_in --auth-verify-url http://127.0.0.1:1234/get_session --auth-user user1 --auth-user-field login --auth-pass-field password --auth-pass pass -o /home/roling/Desktop/lista7
