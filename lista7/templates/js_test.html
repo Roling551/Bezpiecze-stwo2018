@@ -1,0 +1,45 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+
+/*var HttpClient = function() {
+    this.get = function(aUrl, aCallback) {
+        var anHttpRequest = new XMLHttpRequest();
+        anHttpRequest.onreadystatechange = function() { 
+            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                aCallback(anHttpRequest.responseText);
+
+        }
+
+        anHttpRequest.open( "GET", aUrl, true );       
+        anHttpRequest.send( null );
+    }
+}
+var client = new HttpClient();
+client.get('http://127.0.0.1:1234/js_test', function(response) {
+	alert(response)
+});*/
+aUrl = 'http://127.0.0.1:1234/create_account'
+
+aCallback = function(response) {
+	//window.location.href = response
+	alert(response)
+};
+
+var anHttpRequest = new XMLHttpRequest();
+anHttpRequest.onreadystatechange = function() { 
+	if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+		aCallback(anHttpRequest.responseText);
+
+}
+
+anHttpRequest.open( "POST", aUrl, true );
+anHttpRequest.setRequestHeader("login", "aaa");
+//anHttpRequest.setRequestHeader("password", "aaa");  
+anHttpRequest.send( null );
+</script>
+	js test
+</body>
+</html>

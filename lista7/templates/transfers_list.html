@@ -1,0 +1,29 @@
+<html>
+<head>
+	<style>
+	table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+	<table id = "list">
+		<tr>
+			<th>Title</th>
+			<th>Sender</th> 
+			<th>Receiver</th>
+			<th>Amount</th>
+			<th>Description</th>
+		</tr>
+	{% for transfer in data %}
+		<tr onclick="document.location = 'http://127.0.0.1:1234/view_transfer?title={{transfer[0]}}';">
+		{% for col in transfer %}
+			<td> {{ col }} </td>
+		{% endfor %}
+		</tr>
+	{% endfor %}
+	</table>
+</body>
+</html>

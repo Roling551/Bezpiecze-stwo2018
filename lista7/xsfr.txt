@@ -1,0 +1,16 @@
+Jeżeli strona obsługuje GET
+http://127.0.0.1:1234/realise_transfer?title=title1
+Jeżeli obsługuje wyłącznie POST należy wysłać link do następującej strony:
+<html>
+<body>
+<form action=http://127.0.0.1:1234/realise_transfer?title=title1 method="POST">
+	<p>
+		<input id = "button_"  value="Realise" type="submit">
+	</p>
+</form>
+<script>
+	var button = document.getElementById('button_');
+	button.click()
+</script>
+</body>
+</html>

